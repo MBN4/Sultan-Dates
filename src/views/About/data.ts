@@ -1,7 +1,9 @@
+import siteContent from '@/data/siteContent.json';
+
 export const aboutHero = {
   title: 'Rooted in Ancient Groves,\nBlessed by Tradition',
   subtitle: 'OUR SACRED HERITAGE',
-  description: 'At Sultan Dates (سلطان), we preserve and celebrate the timeless harvest of the date palm tree. Sourced directly from certified, century-old palm orchards in Al-Madinah Al-Munawwarah and Al-Qassim, each date is hand-picked at peak ripeness to bring natural sweetness, royal texture, and spiritual heritage to your table.'
+  description: siteContent.story.paragraph1 + ' ' + siteContent.story.paragraph2
 };
 
 export const pillars = [
@@ -47,22 +49,7 @@ export const practices = [
   { title: 'Gold Seal Packaging', color: '#C59B27' }
 ];
 
-export const faqs = [
-  {
-    question: "What makes your Ajwa Al-Madinah dates authentic?",
-    answer: "Our Ajwa dates come directly from certified groves in Al-Madinah Al-Munawwarah. They feature the characteristic matte dark hue, fine white micro-crevices, and soft chewy texture celebrated in prophetic tradition for cardiovascular health and protection."
-  },
-  {
-    question: "How should I store fresh dates?",
-    answer: "Dates keep exceptionally well! Store them in an airtight container in a cool, dry pantry away from direct sunlight for up to 6 months, or refrigerate for up to 12 months. Soft Rutab varieties (like Sukkari Rutab) are best kept chilled or frozen to preserve their creamy texture."
-  },
-  {
-    question: "What are the health benefits of eating dates daily?",
-    answer: "Dates are a natural superfood packed with dietary fiber, potassium, magnesium, copper, vitamin B6, and powerful polyphenol antioxidants. They provide steady, sustained energy without glucose spikes and support digestive balance."
-  },
-  {
-    question: "Do you provide custom corporate and Eid gifting boxes?",
-    answer: "Yes! We specialize in custom gold-embossed wooden boxes, velvet hampers, and personalized ribbons for Ramadan, Eid, weddings, and corporate celebrations. Contact our concierge on WhatsApp (0328-3283282) for bulk catalog inquiries."
-  }
-];
-
+export const faqs = siteContent.faqs.map(f => ({
+  question: f.question,
+  answer: f.answer
+}));

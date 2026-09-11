@@ -1,6 +1,5 @@
-// Products may offer weight variants (1kg / 500gm / 250gm). When `variants`
-// is present, the card shows a size selector and `price` is just the default
-// (first variant). Products without variants use `price` directly.
+import productsData from '@/data/products.json';
+
 export const bundles = [
   {
     title: 'The Sultan Royal Duo',
@@ -22,214 +21,51 @@ export const shopHero = {
   description: 'Explore our hand-harvested selection of sacred Ajwa Al-Madinah, Royal King Medjool, Amber, Sukkari, and artisanal stuffed delicacies — choose your size and savor royal hospitality.'
 };
 
-export const filters = ['All', 'Ajwa', 'Medjool', 'Mabroom & Amber', 'Sukkari & Safawi', 'Stuffed & Delights', 'Date Syrups'];
+// Normalize categories whether array of strings or array of objects
+export const filters: string[] = (productsData.categories || []).map((c: any) =>
+  typeof c === 'string' ? c : c.name || ''
+);
 
-const g3 = (kg: string, half: string, quarter: string) => [
-  { label: '1 kg', price: `Rs ${kg}` },
-  { label: '500 gm', price: `Rs ${half}` },
-  { label: '250 gm', price: `Rs ${quarter}` }
-];
-
-export const shopProducts = [
-  // Ajwa Collection
-  {
-    id: 1,
-    name: 'Sacred Ajwa Al-Madinah (VIP Grade)',
-    price: 'Rs 4,500',
-    category: 'Ajwa',
-    image: '/assets/images/products/honey/honey1.png',
-    tag: 'Holy City Origin',
-    variants: g3('4,500', '2,400', '1,250'),
-    description: 'Directly sourced from the ancient palm groves of Al-Madinah Al-Munawwarah. Revered for its dark tone, fine micro-wrinkles, soft bite, and profound spiritual and cardiovascular wellness properties.',
-    instructions: 'Store in an airtight container in a cool, shaded oasis environment. Avoid moisture.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 2,
-    name: 'Ajwa Al-Aliya Premium',
-    price: 'Rs 5,200',
-    category: 'Ajwa',
-    image: '/assets/images/products/honey/honey2.png',
-    tag: 'Aliya Grove Heritage',
-    variants: g3('5,200', '2,750', '1,450'),
-    description: 'Cultivated in the prestigious high-ground gardens of Al-Aliya in Madinah. Exceptionally rich in antioxidants, selenium, and vital minerals.',
-    instructions: 'Recommended 7 dates daily in accordance with traditional Sunnah practice.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 3,
-    name: 'Ajwa Seven-Day Sunnah Pack',
-    price: 'Rs 1,800',
-    category: 'Ajwa',
-    image: '/assets/images/products/honey/honey3.png',
-    tag: 'Daily Routine',
-    variants: [
-      { label: '49 Dates Box (7x7)', price: 'Rs 1,800' },
-      { label: '98 Dates Box (14x7)', price: 'Rs 3,400' }
-    ],
-    description: 'Pre-portioned gift package containing 49 hand-inspected Ajwa dates for daily morning consumption.',
-    instructions: 'Keep sealed at room temperature.',
-    netWeight: '500g, 1000g'
-  },
-
-  // Medjool Collection
-  {
-    id: 4,
-    name: 'Royal Medjool King Jumbo',
-    price: 'Rs 3,800',
-    category: 'Medjool',
-    image: '/assets/images/products/ghee/desi-ghee-1kg.png',
-    tag: 'Bestseller',
-    variants: g3('3,800', '1,950', '1,050'),
-    description: 'The King of Dates. Large, plump, and glistening with natural golden-caramel skin. Lusciously soft, fibrous texture with a rich honey finish.',
-    instructions: 'Store refrigerated for optimal firmness or at room temperature for extra softness.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 5,
-    name: 'Royal Medjool Select Medium',
-    price: 'Rs 3,200',
-    category: 'Medjool',
-    image: '/assets/images/products/ghee/desi-ghee-half-kg.png',
-    tag: 'Great Value',
-    variants: g3('3,200', '1,650', '900'),
-    description: 'Perfect for daily snacking and desserts. Full of rich potassium, natural fructose, and iron.',
-    instructions: 'Keep in dry conditions.',
-    netWeight: '1000g, 500g, 250g'
-  },
-
-  // Mabroom & Amber
-  {
-    id: 6,
-    name: 'Mabroom Premium Al-Madinah',
-    price: 'Rs 2,900',
-    category: 'Mabroom & Amber',
-    image: '/assets/images/products/spices/turmeric-powder.png',
-    tag: 'Chewy & Slender',
-    variants: g3('2,900', '1,500', '800'),
-    description: 'Distinctive elongated form with a firm yet chewy bite. Subtle toffee sweetness with a warm amber skin.',
-    instructions: 'Store sealed in a cool pantry.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 7,
-    name: 'Amber Royal Large Dates',
-    price: 'Rs 3,600',
-    category: 'Mabroom & Amber',
-    image: '/assets/images/products/spices/garam-masala-powder.png',
-    tag: 'Thick & Meaty',
-    variants: g3('3,600', '1,850', '950'),
-    description: 'One of the most sought-after varieties in the Kingdom. Famous for its thick flesh, dry outer crust, and soft aromatic interior.',
-    instructions: 'Keep dry and sealed.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 8,
-    name: 'Safawi Al-Madinah Dark Dates',
-    price: 'Rs 2,400',
-    category: 'Mabroom & Amber',
-    image: '/assets/images/products/spices/black-pepper-powder.png',
-    tag: 'Rich & Moist',
-    variants: g3('2,400', '1,250', '650'),
-    description: 'Deep black-purple hue, intensely rich in flavor and natural moisture. Excellent natural stamina booster.',
-    instructions: 'Keep sealed at room temperature.',
-    netWeight: '1000g, 500g, 250g'
-  },
-
-  // Sukkari & Safawi
-  {
-    id: 9,
-    name: 'Sukkari Rutab (Golden Melt)',
-    price: 'Rs 2,600',
-    category: 'Sukkari & Safawi',
-    image: '/assets/images/products/spices/zeera-powder.png',
-    tag: 'Soft Caramel',
-    variants: g3('2,600', '1,350', '700'),
-    description: 'Meaning "The Sweet One". Sukkari Rutab melts effortlessly in the mouth with a golden amber color and creamy caramel undertone.',
-    instructions: 'Keep chilled for best texture.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 10,
-    name: 'Sukkari Mufaddal Crisp',
-    price: 'Rs 2,200',
-    category: 'Sukkari & Safawi',
-    image: '/assets/images/products/spices/coriander-powder.png',
-    tag: 'Crunch & Sweet',
-    variants: g3('2,200', '1,150', '600'),
-    description: 'Sun-dried Sukkari with a satisfying crystallized outer sugar crunch and soft inner heart.',
-    instructions: 'Store in dry place.',
-    netWeight: '1000g, 500g, 250g'
-  },
-
-  // Stuffed & Confectionery Delights
-  {
-    id: 11,
-    name: 'Roasted Almond & Pistachio Stuffed Dates',
-    price: 'Rs 3,400',
-    category: 'Stuffed & Delights',
-    image: '/assets/images/products/pickles/mango-boneless-pickle.png',
-    tag: 'Artisanal Delight',
-    variants: g3('3,400', '1,750', '900'),
-    description: 'Jumbo Medjool and Amber dates pitted and filled with slow-roasted Iranian pistachios and California almonds, drizzled with floral honey.',
-    instructions: 'Serve fresh alongside Arabic Gahwa or tea.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 12,
-    name: 'Belgian Dark Chocolate Enrobed Dates',
-    price: 'Rs 3,600',
-    category: 'Stuffed & Delights',
-    image: '/assets/images/products/pickles/mix-boneless-achaar.png',
-    tag: 'Gourmet Luxury',
-    variants: g3('3,600', '1,850', '950'),
-    description: 'Premium dates cloaked in 70% rich Belgian dark chocolate and sprinkled with crushed roasted hazelnuts.',
-    instructions: 'Keep in a cool ambient temperature below 22°C.',
-    netWeight: '1000g, 500g, 250g'
-  },
-  {
-    id: 13,
-    name: 'Walnut & Cardamom Stuffed Dates',
-    price: 'Rs 3,200',
-    category: 'Stuffed & Delights',
-    image: '/assets/images/products/pickles/garlic-pickle.png',
-    tag: 'Spiced Heritage',
-    variants: g3('3,200', '1,650', '850'),
-    description: 'Filled with aromatic crushed green cardamom and buttery Kashmiri walnuts.',
-    instructions: 'Keep in a dry container.',
-    netWeight: '1000g, 500g, 250g'
-  },
-
-  // Date Syrups & Pastes
-  {
-    id: 14,
-    name: 'Pure Organic Date Molasses / Dibs (500g)',
-    price: 'Rs 1,200',
-    category: 'Date Syrups',
-    image: '/assets/images/products/pickles/imli-sauce.png',
-    tag: '100% Pure',
-    variants: [
-      { label: '500 gm Bottle', price: 'Rs 1,200' },
-      { label: '1000 gm Jar', price: 'Rs 2,200' }
-    ],
-    description: 'Cold-extracted from 100% natural organic dates with zero added cane sugar, preservatives, or artificial coloring. Perfect healthy replacement for honey and maple syrup.',
-    instructions: 'Drizzle over pancakes, waffles, yogurt, tahini, or smoothies.',
-    netWeight: '500g, 1000g'
-  },
-  {
-    id: 15,
-    name: 'Artisanal Natural Date Paste (1kg)',
-    price: 'Rs 1,800',
-    category: 'Date Syrups',
-    image: '/assets/images/products/pickles/green-chutney.png',
-    tag: 'Baking & Energy',
-    variants: [
-      { label: '1 kg Pouch', price: 'Rs 1,800' },
-      { label: '500 gm Pouch', price: 'Rs 950' }
-    ],
-    description: 'Smooth, seedless date paste made from premium soft dates. Perfect for Maamoul cookies, raw energy bars, and culinary creations.',
-    instructions: 'Store in refrigerator after opening.',
-    netWeight: '1000g, 500g'
+// Map products data
+export const shopProducts = (productsData.products || []).map((p: any) => {
+  const priceStr = typeof p.price === 'number' ? `Rs ${p.price.toLocaleString()}` : (p.price || 'Rs 0');
+  
+  // Format variants
+  let variants = p.variants;
+  if (!variants || variants.length === 0) {
+    if (p.availableWeights && Array.isArray(p.availableWeights)) {
+      const baseNum = typeof p.price === 'number' ? p.price : parseInt(String(p.price).replace(/[^\d]/g, '')) || 4000;
+      variants = p.availableWeights.map((w: string) => {
+        let factor = 1;
+        if (w.includes('500') || w.includes('Half')) factor = 0.55;
+        else if (w.includes('250') || w.includes('Quarter')) factor = 0.3;
+        return { label: w, price: `Rs ${Math.round(baseNum * factor).toLocaleString()}` };
+      });
+    }
   }
-];
 
+  return {
+    id: p.id,
+    name: p.name,
+    arabicName: p.arabicName,
+    price: priceStr,
+    category: p.category,
+    image: (p.images && p.images.length > 0 ? p.images[0] : p.image) || '/assets/images/products/honey/honey1.png',
+    tag: p.tag || (p.isBestSeller ? 'Royal Best Seller' : (p.isNew ? 'New Harvest' : p.grade || 'Grade A+')),
+    inStock: p.inStock !== false,
+    featured: Boolean(p.featured || p.isBestSeller),
+    variants: variants || [
+      { label: '1 kg', price: priceStr },
+      { label: '500 gm', price: priceStr },
+      { label: '250 gm', price: priceStr }
+    ],
+    description: p.description,
+    longDescription: p.longDescription,
+    origin: p.origin,
+    grade: p.grade,
+    flavorProfile: p.flavorProfile,
+    nutritionHighlights: p.nutritionHighlights,
+    instructions: p.instructions || p.storageAdvice || 'Store in an airtight container in a cool, shaded oasis environment. Avoid moisture.',
+    netWeight: p.netWeight || p.weight || '1000g, 500g, 250g'
+  };
+});

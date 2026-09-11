@@ -1,0 +1,163 @@
+{
+  "announcement": {
+    "enabled": true,
+    "text": "Ramadan & Festive Royal Reserve • Free Express Shipping on orders over $150 with code ROYALFREESHIP"
+  },
+  "hero": {
+    "badge": "Hand-Harvested In Medina Al-Munawwarah",
+    "titleLine1": "Crown Jewel Of",
+    "titleLine2": "Arabian Dates",
+    "description": "Experience hand-selected, authentic Saudi dates harvested at peak ripeness from the historic palm groves of Medina. Unmatched richness, velvety textures, and pure natural sweetness delivered directly to your doorstep.",
+    "primaryCta": {
+      "text": "Explore Royal Reserve",
+      "href": "/shop"
+    },
+    "secondaryCta": {
+      "text": "The Sultan's Story",
+      "href": "/about"
+    },
+    "statPills": [
+      { "label": "Origin", "value": "Medina & Al-Qassim" },
+      { "label": "Purity", "value": "100% Organic & Raw" },
+      { "label": "Grading", "value": "Grade-A Jumbo Pick" }
+    ]
+  },
+  "connoisseurGuide": {
+    "badge": "The Connoisseur's Guide",
+    "title": "A Royal Guide to Date Varieties",
+    "subtitle": "Discover the unique flavor profiles, textures, and origins of our master harvest",
+    "varieties": [
+      {
+        "id": "ajwa",
+        "name": "Ajwa Al-Madinah",
+        "arabicName": "عجوة المدينة",
+        "flavorProfile": "Prune, subtle honey, dark cocoa undertones",
+        "texture": "Soft, velvety chew with a fine wrinkled skin",
+        "bestFor": "Daily morning wellness, sacred gifting, tradition",
+        "sweetness": 3,
+        "softness": 4,
+        "image": "/assets/images/placeholder.svg"
+      },
+      {
+        "id": "medjool",
+        "name": "Royal Medjool",
+        "arabicName": "مجدول ملكي",
+        "flavorProfile": "Rich caramel, brown sugar, hints of wild vanilla",
+        "texture": "Plump, luscious, melt-in-mouth succulent flesh",
+        "bestFor": "Entertaining guests, artisanal stuffing, gourmet desserts",
+        "sweetness": 5,
+        "softness": 5,
+        "image": "/assets/images/placeholder.svg"
+      },
+      {
+        "id": "mabroom",
+        "name": "Mabroom Royal",
+        "arabicName": "مبروم فاخر",
+        "flavorProfile": "Mild toffee, subtle roasted nut notes, less sweet",
+        "texture": "Firm, slender, pleasantly chewy and resilient",
+        "bestFor": "Pairing with Arabic coffee (Qahwa), evening snacking",
+        "sweetness": 2,
+        "softness": 2,
+        "image": "/assets/images/placeholder.svg"
+      },
+      {
+        "id": "sukkari",
+        "name": "Golden Sukkari",
+        "arabicName": "سكري القصيم",
+        "flavorProfile": "Intense pure honey, golden butterscotch, creamy",
+        "texture": "Crisp crystalline outer edge with a soft melt-in-mouth core",
+        "bestFor": "Afternoon energy, children's favorite, tea time pairing",
+        "sweetness": 5,
+        "softness": 4,
+        "image": "/assets/images/placeholder.svg"
+      },
+      {
+        "id": "safawi",
+        "name": "Safawi Midnight",
+        "arabicName": "صفاوي أسود",
+        "flavorProfile": "Deep black cherry, dark molasses, robust earthiness",
+        "texture": "Moist, chewy, glossy dark purple-black skin",
+        "bestFor": "Pre-workout energy, digestion, mineral replenishment",
+        "sweetness": 3,
+        "softness": 3,
+        "image": "/assets/images/placeholder.svg"
+      },
+      {
+        "id": "khidri",
+        "name": "Amber Khidri",
+        "arabicName": "خضري كلاسيك",
+        "flavorProfile": "Delicate raisin, caramelized apple notes",
+        "texture": "Flaky, substantial bite with great structural body",
+        "bestFor": "Stuffing with roasted almonds, walnuts & orange peel",
+        "sweetness": 3,
+        "softness": 3,
+        "image": "/assets/images/placeholder.svg"
+      }
+    ]
+  },
+  "freshnessPromise": {
+    "badge": "From Grove to Palace",
+    "title": "The Sultan's 4-Step Freshness Promise",
+    "subtitle": "How we preserve uncompromised luxury from ancient oases straight to your doorstep",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Sun-Kissed Harvesting",
+        "description": "Each bunch is hand-harvested at peak Rutab and Tamar stages by hereditary grove masters in Medina and Al-Qassim."
+      },
+      {
+        "number": "02",
+        "title": "Zero-Additive Curing",
+        "description": "No added sugar, glucose glazes, preservatives, or artificial fumigation. 100% natural, whole fruit purity."
+      },
+      {
+        "number": "03",
+        "title": "Triple Grade-A Sorting",
+        "description": "Dates are sorted by size, skin moisture, and blemish-free aesthetics. Only the top 5% harvest qualifies for Sultan Reserve."
+      },
+      {
+        "number": "04",
+        "title": "Sealed Luxury Vaulting",
+        "description": "Packed in food-grade hermetic golden tins and gift boxes with temperature-controlled express global dispatch."
+      }
+    ]
+  },
+  "story": {
+    "badge": "Our Heritage",
+    "title": "Rooted in Sacred Soil & Centuries of Mastery",
+    "paragraph1": "For over three generations, our family has tended to historic date palm oases across the Arabian Peninsula. What began as a humble Medina sanctuary has blossomed into Sultan Dates—the benchmark for luxury Arabian confectionery.",
+    "paragraph2": "We believe dates are not merely food; they are a timeless emblem of hospitality, sacred wellness, and natural indulgence. By marrying ancient desert wisdom with rigorous cold-chain quality controls, we ensure every date arrives as pristine as if plucked minutes ago."
+  },
+  "faqs": [
+    {
+      "id": "faq-1",
+      "question": "What makes Sultan Dates distinct from standard market dates?",
+      "answer": "Sultan Dates exclusively selects Grade-A Jumbo dates harvested from certified organic family groves in Medina Al-Munawwarah and Al-Qassim. We never apply glucose glazes, artificial syrup coatings, or chemical preservatives. Each date is hand-sorted, moisture-calibrated, and packaged in hermetically sealed luxury tins.",
+      "category": "Quality & Sourcing"
+    },
+    {
+      "id": "faq-2",
+      "question": "How should I store Sultan Dates to maintain optimal freshness?",
+      "answer": "Store soft varieties like Ajwa and Sukkari in an airtight container in the refrigerator (4°C) for up to 6 months, or in the freezer for up to 12 months for prolonged luxury chewiness. Semi-firm varieties like Mabroom and Safawi keep beautifully in a cool, dry pantry out of direct sunlight.",
+      "category": "Storage & Care"
+    },
+    {
+      "id": "faq-3",
+      "question": "Are Sultan Dates suitable for diabetic diets and clean eating?",
+      "answer": "Yes! Dates have a low-to-medium Glycemic Index (GI) and are abundant in natural dietary fiber, potassium, magnesium, and polyphenols. Because our dates contain zero added sugars, they offer sustained energy without artificial sugar spikes. We recommend consulting your healthcare physician for exact individual dietary allowances.",
+      "category": "Nutrition & Wellness"
+    },
+    {
+      "id": "faq-4",
+      "question": "What is your shipping timeline for domestic and international orders?",
+      "answer": "We process orders within 24 business hours. Domestic deliveries arrive within 2–4 business days via express courier. International orders are handled with temperature-protected air freight and typically arrive within 4–7 business days worldwide with full doorstep tracking.",
+      "category": "Shipping & Orders"
+    },
+    {
+      "id": "faq-5",
+      "question": "Do you provide custom corporate gifting and wedding favors?",
+      "answer": "Yes, we specialize in bespoke royal gift boxes, gold-embossed wooden caskets, and customized festive assortments for weddings, VIP corporate events, and Ramadan celebrations. Contact our Royal Concierge team via our Contact page for customized volume orders.",
+      "category": "Gifting & Corporate"
+    }
+  ]
+}

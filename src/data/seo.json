@@ -1,0 +1,49 @@
+{
+  "general": {
+    "siteTitle": "Sultan Dates | Royal Organic Arabian Dates & Gourmet Gifts",
+    "titleTemplate": "%s | Sultan Dates",
+    "description": "Indulge in authentic Grade-A Saudi Arabian dates hand-harvested from Medina Al-Munawwarah. Organic Ajwa, Medjool, Mabroom, Sukkari, and bespoke gourmet gift boxes.",
+    "keywords": [
+      "Saudi dates",
+      "Ajwa dates Medina",
+      "Royal Medjool dates",
+      "Mabroom dates",
+      "Sukkari dates",
+      "Organic Arabian dates",
+      "Luxury date gifts",
+      "Gourmet dates Dubai",
+      "Fresh Saudi dates online",
+      "Stuffed gourmet dates"
+    ],
+    "siteUrl": "https://sultan-dates.com",
+    "canonicalUrl": "https://sultan-dates.com",
+    "openGraphImage": "/assets/images/og-banner.jpg",
+    "twitterHandle": "@sultandates",
+    "locale": "en_US"
+  },
+  "pages": {
+    "home": {
+      "title": "Crown Jewel of Arabian Dates",
+      "description": "Experience hand-selected, authentic Saudi dates harvested at peak ripeness from the historic palm groves of Medina."
+    },
+    "shop": {
+      "title": "Royal Date Collection & Gourmet Reserves",
+      "description": "Explore our curated catalog of Ajwa Al-Madinah, Royal Medjool, Golden Sukkari, artisanal stuffed dates, and raw date syrups."
+    },
+    "about": {
+      "title": "Our Heritage & Sacred Palm Groves",
+      "description": "Discover three generations of date cultivation mastery in the holy desert oases of Medina and Al-Qassim."
+    },
+    "contact": {
+      "title": "Royal Concierge & Inquiries",
+      "description": "Connect with Sultan Dates concierge for bespoke orders, corporate gifting, and worldwide delivery inquiries."
+    }
+  },
+  "contactInfo": {
+    "email": "concierge@sultan-dates.com",
+    "phone": "+966 50 123 4567",
+    "whatsapp": "+966 50 123 4567",
+    "address": "King Fahd Road, Medina Al-Munawwarah, Kingdom of Saudi Arabia",
+    "workingHours": "Sat - Thu: 09:00 AM - 10:00 PM (AST)"
+  }
+}
