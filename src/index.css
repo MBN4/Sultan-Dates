@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cinzel", ui-serif, Georgia, serif;
+  --font-mono: "Poppins", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-forest: #EDF3E8;
+  --color-forest-dark: #0D2818;
+  --color-lime: #4E9200;
+  --color-lime-dark: #3E7500;
+  --color-palm: #3E7500;
+  --color-palm-light: #62B500;
+  --color-gold: #C59B27;
+  --color-gold-light: #E0BA4E;
+  --color-cream: #F5F7F0;
+}
+
+@layer base {
+  body {
+    @apply bg-[#EDF3E8] text-stone-900 antialiased overflow-x-hidden font-sans;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-20;
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-[32px] shadow-sm;
+  }
+  
+  .hero-gradient {
+    background: radial-gradient(circle at 70% 30%, rgba(78, 146, 0, 0.15) 0%, rgba(197, 155, 39, 0.08) 40%, transparent 70%);
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .animate-float {
+    animation: float 10s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(8deg); }
+  }
+}
+
