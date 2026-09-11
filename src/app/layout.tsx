@@ -3,10 +3,7 @@ import type { ReactNode } from 'react';
 import '@/index.css';
 import { CartProvider } from '@/context/CartContext';
 import { ModalProvider } from '@/context/ModalContext';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import FloatingIcons from '@/components/ui/FloatingIcons';
-import Preloader from '@/components/ui/Preloader';
+import StoreLayoutWrapper from '@/components/layout/StoreLayoutWrapper';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sultandates.com'),
@@ -117,14 +114,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-[#EDF3E8] text-stone-900 antialiased font-sans">
         <CartProvider>
           <ModalProvider>
-            <Preloader />
-            <FloatingIcons />
-            <Navbar />
-            <main className="relative z-10">{children}</main>
-            <Footer />
+            <StoreLayoutWrapper>{children}</StoreLayoutWrapper>
           </ModalProvider>
         </CartProvider>
       </body>
     </html>
   );
-}
+}
