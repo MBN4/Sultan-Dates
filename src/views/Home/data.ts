@@ -34,16 +34,31 @@ export const heroSlides = [
   }
 ];
 
-export const marqueeItems = [
-  'SACRED AJWA AL-MADINAH',
-  'ROYAL JUMBO MEDJOOL',
-  'CARAMEL SUKKARI RUTAB',
-  'MABROOM & AMBER DATES',
-  'BELGIAN CHOCOLATE DATES',
-  'PISTACHIO STUFFED DATES',
-  '100% ORGANIC & SUNNAH HERITAGE',
-  'COLD-EXTRACTED DATE SYRUP'
+export const marqueeTopItems = [
+  { text: 'عجوة المدينة المنورة', subtitle: 'Sacred Ajwa Al-Madinah', highlight: true },
+  { text: '100% Organic Blessed Harvest', subtitle: 'Grade A+ Jumbo Pick', highlight: false },
+  { text: 'مجدول ملكي فاخر', subtitle: 'King Jumbo Medjool', highlight: true },
+  { text: 'Sunnah Heritage & Purity', subtitle: 'Zero Added Sugars', highlight: false },
+  { text: 'سكري القصيم الذهبي', subtitle: 'Golden Sukkari Rutab', highlight: true },
+  { text: 'Direct Oasis Cold-Chain', subtitle: 'Fresh From Saudi Groves', highlight: false },
+  { text: 'مبروم ملكي ممتاز', subtitle: 'Mabroom Royal Reserve', highlight: true },
+  { text: 'Gold Seal Presentation', subtitle: 'Bespoke Arabian Gifting', highlight: false },
+  { text: 'صفاوي أسود فاخر', subtitle: 'Safawi Midnight Elite', highlight: true },
+  { text: 'Artisanal Stuffed Delicacies', subtitle: 'Belgian Cocoa & Roasted Nuts', highlight: false }
 ];
+
+export const marqueeBottomItems = [
+  { name: 'Ajwa Al-Madinah VIP', price: 'Rs 4,500', arabic: 'عجوة', origin: 'Medina Origin', tag: 'Holy City' },
+  { name: 'Royal King Medjool', price: 'Rs 3,800', arabic: 'مجدول', origin: 'Succulent Jumbo', tag: 'Bestseller' },
+  { name: 'Golden Sukkari Rutab', price: 'Rs 2,900', arabic: 'سكري', origin: 'Al-Qassim', tag: 'Creamy Sweet' },
+  { name: 'Mabroom Royal Reserve', price: 'Rs 3,400', arabic: 'مبروم', origin: 'Ancient Groves', tag: 'Toffee Notes' },
+  { name: 'Belgian Chocolate Dates', price: 'Rs 4,200', arabic: 'شوكولاتة', origin: 'Handcrafted', tag: 'Gourmet' },
+  { name: 'Safawi Midnight Harvest', price: 'Rs 3,200', arabic: 'صفاوي', origin: 'Medina', tag: 'Mineral Rich' },
+  { name: 'Roasted Nut Stuffed Dates', price: 'Rs 3,950', arabic: 'محشي', origin: 'Artisanal', tag: 'Pistachio & Almond' },
+  { name: 'Cold Extracted Date Syrup', price: 'Rs 1,950', arabic: 'دبس تمر', origin: '100% Pure', tag: 'Natural Nectar' }
+];
+
+export const marqueeItems = marqueeTopItems.map(m => m.subtitle);
 
 export const products = [
   {

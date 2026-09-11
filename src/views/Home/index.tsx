@@ -13,7 +13,9 @@ import {
   benefits, 
   dateVarietiesGuide, 
   qualityJourney, 
-  superfoodMetrics 
+  superfoodMetrics,
+  marqueeTopItems,
+  marqueeBottomItems
 } from './data';
 
 const isPriced = (price: string) => price.startsWith('Rs');
@@ -172,34 +174,59 @@ export default function Home() {
         </main>
       </section>
 
-      <section className="marquee-container py-12 overflow-hidden whitespace-nowrap border-y border-stone-900/5 bg-stone-900/[0.02]">
-        <div className="flex">
-          <motion.div 
-            animate={{ x: [0, -1000] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-            className="flex gap-12 items-center pr-12"
+      {/* Dual Opposing Direction Luxury Marquees */}
+      <section className="py-8 md:py-12 overflow-hidden border-y border-[#C59B27]/25 bg-gradient-to-b from-[#0D2818] via-[#091b10] to-[#0D2818] text-white relative shadow-2xl">
+        {/* Ambient background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#4E9200]/10 via-transparent to-transparent pointer-events-none" />
+
+        {/* Top Marquee Ribbon (Moving Left) */}
+        <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-4 md:mb-5">
+          <motion.div
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
+            className="flex gap-8 items-center whitespace-nowrap w-max"
           >
-            {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="flex gap-12 items-center">
-                {products.map((product) => (
-                  <div key={product.id} className="flex items-center gap-8 group">
-                    <div className="w-32 h-32 md:w-48 md:h-48 rounded-2xl overflow-hidden border border-stone-900/10 glass-card">
-                      <img loading="lazy" decoding="async" 
-                        src={product.image} 
-                        alt={product.name} 
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <span className="text-2xl md:text-3xl font-serif italic text-stone-900 tracking-tighter group-hover:text-lime transition-colors">
-                        {product.name}
-                      </span>
-                      <span className="text-[10px] font-bold tracking-[0.3em] uppercase opacity-40">{product.tag}</span>
-                    </div>
-                    <span className="text-4xl opacity-10 font-light mx-4">—</span>
-                  </div>
-                ))}
+            {[...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems].map((item, idx) => (
+              <div key={idx} className="inline-flex items-center gap-4 group">
+                <span className="text-[#C59B27] font-serif text-sm">✦</span>
+                <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 group-hover:border-[#C59B27]/40 group-hover:bg-white/[0.08] transition-all">
+                  <span className="font-serif text-sm md:text-base font-bold tracking-wide text-stone-100">
+                    {item.text}
+                  </span>
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#C59B27] bg-[#C59B27]/15 px-2.5 py-0.5 rounded-full border border-[#C59B27]/25">
+                    {item.subtitle}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Bottom Marquee Ribbon (Moving in OPPOSITE Direction - Moving Right) */}
+        <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <motion.div
+            animate={{ x: ['-50%', '0%'] }}
+            transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
+            className="flex gap-6 items-center whitespace-nowrap w-max"
+          >
+            {[...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems].map((item, idx) => (
+              <div
+                key={idx}
+                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-white/[0.07] to-white/[0.03] border border-white/10 hover:border-[#4E9200]/50 hover:bg-[#4E9200]/10 transition-all shadow-sm group"
+              >
+                <div className="w-2 h-2 rounded-full bg-[#4E9200] shadow-[0_0_8px_#4E9200]" />
+                <span className="font-serif font-bold text-sm text-stone-100 group-hover:text-[#4E9200] transition-colors">
+                  {item.name}
+                </span>
+                <span className="text-xs font-bold text-[#C59B27] font-mono">
+                  {item.price}
+                </span>
+                <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 bg-black/40 px-2 py-0.5 rounded-md border border-white/5">
+                  {item.origin}
+                </span>
+                <span className="text-xs font-serif text-[#C59B27] font-bold">
+                  {item.arabic}
+                </span>
               </div>
             ))}
           </motion.div>
