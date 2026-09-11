@@ -6,20 +6,20 @@
   --font-serif: "Cinzel", ui-serif, Georgia, serif;
   --font-mono: "Poppins", ui-monospace, SFMono-Regular, monospace;
   
-  --color-forest: #EDF3E8;
-  --color-forest-dark: #0D2818;
+  --color-forest: #FAF8F5;
+  --color-forest-dark: #071E12;
   --color-lime: #4E9200;
   --color-lime-dark: #3E7500;
   --color-palm: #3E7500;
   --color-palm-light: #62B500;
   --color-gold: #C59B27;
   --color-gold-light: #E0BA4E;
-  --color-cream: #F5F7F0;
+  --color-cream: #F5F0E8;
 }
 
 @layer base {
   body {
-    @apply bg-[#EDF3E8] text-stone-900 antialiased overflow-x-hidden font-sans;
+    @apply bg-[#FAF8F5] text-stone-900 antialiased overflow-x-hidden font-sans;
   }
 }
 
@@ -29,25 +29,19 @@
   }
   
   .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/50 rounded-[32px] shadow-sm;
+    @apply bg-white/80 backdrop-blur-xl border border-stone-200/60 rounded-[32px] shadow-sm;
   }
   
   .hero-gradient {
-    background: radial-gradient(circle at 70% 30%, rgba(78, 146, 0, 0.15) 0%, rgba(197, 155, 39, 0.08) 40%, transparent 70%);
-  }
-
-  .vertical-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    background: radial-gradient(circle at 70% 30%, rgba(78, 146, 0, 0.12) 0%, rgba(197, 155, 39, 0.08) 40%, transparent 70%);
   }
 
   .animate-float {
-    animation: float 10s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   @keyframes float {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-30px) rotate(8deg); }
+    50% { transform: translateY(-16px) rotate(3deg); }
   }
 }
-

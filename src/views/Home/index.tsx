@@ -48,128 +48,178 @@ export default function Home() {
   const activeVariety = dateVarietiesGuide[selectedVariety] || dateVarietiesGuide[0];
 
   return (
-    <div className="flex flex-col text-stone-900 selection:bg-[#4E9200] selection:text-white">
-      <section className="relative min-h-screen flex flex-col pt-24 px-6 bg-gradient-to-br from-[#EDF3E8] via-[#E2ECDA] to-[#4E9200]/10 overflow-hidden">
-        <main className="grid grid-cols-12 gap-6 items-center max-w-7xl mx-auto w-full pt-8 pb-12">
-          <div className="col-span-1 hidden lg:flex flex-col justify-between gap-12 py-4 border-l border-stone-900/5 pl-4 self-stretch">
-            <div className="vertical-text text-[10px] tracking-[0.6em] opacity-40 font-bold uppercase whitespace-nowrap text-stone-600">
-              AL-MADINAH • ROYAL HARVEST
-            </div>
-            <div className="flex flex-col space-y-4 items-center">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#4E9200]" />
-              <div className="w-2 h-2 rounded-full bg-[#C59B27]" />
-              <div className="w-2 h-2 rounded-full bg-stone-900/10" />
-            </div>
-          </div>
+    <div className="flex flex-col text-stone-900 selection:bg-[#4E9200] selection:text-white bg-[#FAF8F5]">
+      {/* Hero Section */}
+      <section className="relative min-h-[90vh] flex flex-col justify-center pt-32 md:pt-40 pb-16 px-6 md:px-12 lg:px-20 overflow-hidden bg-gradient-to-b from-[#FAF8F5] via-[#F4EFE6] to-[#FAF8F5]">
+        {/* Subtle royal ambient glow orbs */}
+        <div className="absolute top-20 right-10 w-96 h-96 bg-[#4E9200]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-[#C59B27]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="col-span-12 lg:col-span-6 flex flex-col justify-center space-y-8">
+        <main className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column: Grand Brand Headline & CTAs */}
+          <div className="lg:col-span-7 flex flex-col space-y-7 z-10 text-left">
+            {/* Top Royal Crest Pill */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="inline-block px-4 py-1.5 bg-[#4E9200]/10 text-[#4E9200] border border-[#4E9200]/20 rounded-full text-[10px] font-bold tracking-[0.25em] uppercase w-fit"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#4E9200]/10 text-[#4E9200] border border-[#4E9200]/25 rounded-full text-[11px] font-bold tracking-[0.25em] uppercase w-fit shadow-sm"
             >
-              100% Pure • Sunnah Heritage • Grade A+
+              <Sparkles size={13} className="text-[#C59B27]" />
+              <span>Sacred Medina Harvest • Grade A+ Jumbo</span>
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+            {/* Main Headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-              className="text-5xl md:text-7xl font-serif leading-[1] tracking-tight text-stone-900"
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="space-y-1"
             >
-              <span className="italic font-normal">Blessed Harvest</span> <br />
-              <span className="font-extrabold not-italic text-[#0D2818]">Royal Dates</span> <br />
-              <span className="text-3xl md:text-5xl font-serif text-[#C59B27] italic">Al-Madinah &amp; Beyond</span>
-            </motion.h1>
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif leading-[1.05] tracking-tight text-[#0D2818]">
+                <span className="italic font-normal block text-stone-800">Crown Jewel Of</span>
+                <span className="font-extrabold not-italic text-[#0D2818] block">
+                  Arabian <span className="text-[#4E9200]">Dates.</span>
+                </span>
+              </h1>
+              <div className="flex items-center gap-3 pt-2">
+                <span className="text-xl sm:text-2xl font-serif text-[#C59B27] font-semibold">سلطان للتمور الفاخرة</span>
+                <div className="h-px flex-1 max-w-[120px] bg-gradient-to-r from-[#C59B27]/40 to-transparent" />
+              </div>
+            </motion.div>
 
+            {/* Description Body */}
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-base md:text-lg text-stone-600 max-w-md leading-relaxed font-sans"
-            >
-              Hand-selected sacred Ajwa Al-Madinah, Royal King Medjool, amber-caramel Sukkari, and luxury chocolate-stuffed dates delivered fresh to your door.
-            </motion.p>
-
-            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-              className="flex flex-wrap gap-4 pt-4"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-base md:text-lg text-stone-600 max-w-xl leading-relaxed font-sans"
             >
-              <Link 
-                href="/shop" 
-                className="px-8 py-4 bg-[#0D2818] text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-[#4E9200] hover:scale-105 transition-all shadow-xl shadow-[#4E9200]/20 flex items-center justify-center border border-[#C59B27]/40"
+              Directly hand-harvested at peak ripeness from certified family palm orchards in <strong className="text-stone-900 font-semibold">Al-Madinah Al-Munawwarah</strong> and <strong className="text-stone-900 font-semibold">Al-Qassim</strong>. Experience unmatched velvety chew, natural caramel undertones, and centuries of blessed hospitality.
+            </motion.p>
+
+            {/* Action Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="flex flex-wrap items-center gap-4 pt-2"
+            >
+              <Link
+                href="/shop"
+                className="px-8 py-4 rounded-full bg-gradient-to-r from-[#0D2818] via-[#0f331f] to-[#0D2818] hover:from-[#4E9200] hover:to-[#3E7500] text-white text-xs font-bold uppercase tracking-widest transition-all duration-300 shadow-xl shadow-[#0D2818]/20 flex items-center justify-center gap-2.5 border border-[#C59B27]/40 group"
               >
-                Explore Dates Collection
+                <span>Explore Royal Reserve</span>
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                href="/about" 
-                className="px-8 py-4 bg-white/80 border border-stone-900/10 text-stone-900 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-white transition-all shadow-sm"
+              <Link
+                href="/about"
+                className="px-8 py-4 rounded-full bg-white/90 hover:bg-white text-stone-900 border border-stone-300/80 text-xs font-bold uppercase tracking-widest transition-all shadow-sm hover:shadow-md"
               >
-                Our Heritage
+                Our Sacred Heritage
               </Link>
+            </motion.div>
+
+            {/* Trust Matrix Badges */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="grid grid-cols-3 gap-3 sm:gap-4 pt-4 border-t border-stone-200/80 max-w-lg"
+            >
+              <div className="p-2.5 rounded-2xl bg-white/70 border border-stone-200/60 text-center">
+                <span className="block text-xs md:text-sm font-bold text-[#0D2818]">100% Raw</span>
+                <span className="text-[10px] text-stone-500 font-medium">Zero Added Sugars</span>
+              </div>
+              <div className="p-2.5 rounded-2xl bg-white/70 border border-stone-200/60 text-center">
+                <span className="block text-xs md:text-sm font-bold text-[#4E9200]">Grade-A+</span>
+                <span className="text-[10px] text-stone-500 font-medium">Jumbo Selection</span>
+              </div>
+              <div className="p-2.5 rounded-2xl bg-white/70 border border-stone-200/60 text-center">
+                <span className="block text-xs md:text-sm font-bold text-[#C59B27]">Holy City</span>
+                <span className="text-[10px] text-stone-500 font-medium">Medina Provenance</span>
+              </div>
             </motion.div>
           </div>
 
-          <div className="col-span-12 lg:col-span-5 flex items-center justify-center relative pb-12">
-            <div className="absolute w-64 h-64 md:w-96 md:h-96 bg-lime/20 rounded-full blur-3xl pointer-events-none" />
+          {/* Right Column: Royal Date Spotlight Showcase */}
+          <div className="lg:col-span-5 flex justify-center z-10">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.9, delay: 0.2 }}
+              className="w-full max-w-md bg-white/90 backdrop-blur-xl rounded-[36px] p-6 sm:p-7 shadow-2xl border border-stone-200/80 relative overflow-hidden"
+            >
+              {/* Corner Gold Emblem */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#0D2818] text-[#EDF3E8] text-[10px] font-bold uppercase tracking-wider shadow-sm">
+                  <Sparkles size={11} className="text-[#C59B27]" />
+                  <span>Royal Spotlight</span>
+                </div>
+                <span className="text-xs font-serif font-bold text-[#C59B27]">سلطان للتمور</span>
+              </div>
 
-            <div className="relative w-full max-w-sm flex items-center justify-center">
-              <motion.div
-                animate={{ y: [0, -14, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative w-full aspect-square"
-              >
-                <AnimatePresence>
-                  <motion.img loading="lazy" decoding="async"
+              {/* Main Interactive Product Media Box */}
+              <div className="relative aspect-square w-full rounded-2xl bg-gradient-to-b from-stone-50 to-stone-100/60 overflow-hidden mb-5 border border-stone-100 flex items-center justify-center p-4">
+                <AnimatePresence mode="wait">
+                  <motion.img
                     key={activeSlide}
                     src={slide.image}
                     alt={slide.name}
-                    initial={{ opacity: 0, scale: 0.85, rotate: -6 }}
+                    initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                    exit={{ opacity: 0, scale: 1.08, rotate: 6 }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute inset-0 w-full h-full object-contain drop-shadow-2xl"
+                    exit={{ opacity: 0, scale: 1.05, rotate: 3 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full h-full object-contain drop-shadow-xl"
                   />
                 </AnimatePresence>
 
-                <div className="absolute top-full inset-x-0 mt-6 flex flex-col items-center gap-6">
-                  <motion.div
-                    key={`meta-${activeSlide}`}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex items-center justify-between w-full gap-4"
-                  >
-                    <div>
-                      <h3 className="text-2xl font-serif font-bold italic text-stone-900">{slide.name}</h3>
-                      <span className="text-lg font-bold text-lime">{slide.price}</span>
-                    </div>
-                    <button
-                      onClick={() => addToCart(slide)}
-                      className="w-12 h-12 shrink-0 rounded-full bg-stone-900 text-white flex items-center justify-center cursor-pointer hover:bg-lime transition-all duration-300 shadow-lg shadow-stone-900/10"
-                      aria-label={`Add ${slide.name} to cart`}
-                    >
-                      <Plus size={20} />
-                    </button>
-                  </motion.div>
+                {/* Variety Category Badge */}
+                <span className="absolute bottom-3 left-3 px-3 py-1 rounded-lg bg-black/60 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-wider">
+                  {slide.category || 'Medina Harvest'}
+                </span>
+              </div>
 
-                  <div className="flex gap-2.5">
-                    {heroSlides.map((s, i) => (
-                      <button
-                        key={s.id}
-                        onClick={() => setActiveSlide(i)}
-                        aria-label={`Show ${s.name}`}
-                        className={`h-1.5 rounded-full transition-all duration-500 ${
-                          i === activeSlide ? 'w-8 bg-lime' : 'w-1.5 bg-stone-900/20 hover:bg-stone-900/40'
-                        }`}
-                      />
-                    ))}
+              {/* Product Info & Direct Add */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg md:text-xl font-serif font-bold text-stone-900 leading-tight">
+                      {slide.name}
+                    </h3>
+                    <span className="text-sm font-bold text-[#4E9200] font-sans block mt-0.5">
+                      {slide.price} <span className="text-[10px] text-stone-400 font-normal">/ 1 kg</span>
+                    </span>
                   </div>
+
+                  <button
+                    onClick={() => addToCart(slide)}
+                    className="px-4 py-2.5 rounded-2xl bg-[#0D2818] hover:bg-[#4E9200] text-white text-xs font-bold flex items-center gap-1.5 shadow-lg transition-all duration-300"
+                    aria-label={`Add ${slide.name} to cart`}
+                  >
+                    <Plus size={14} />
+                    <span>Add</span>
+                  </button>
                 </div>
-              </motion.div>
-            </div>
+
+                {/* Slide Selectors / Tabs */}
+                <div className="flex gap-2 pt-2 border-t border-stone-100">
+                  {heroSlides.map((s, i) => (
+                    <button
+                      key={s.id}
+                      onClick={() => setActiveSlide(i)}
+                      className={`flex-1 py-1.5 px-2 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-300 border ${
+                        i === activeSlide
+                          ? 'bg-[#4E9200] text-white border-[#4E9200] shadow-sm'
+                          : 'bg-stone-50 text-stone-500 border-stone-200 hover:border-stone-400'
+                      }`}
+                    >
+                      {s.category || `Variety ${i + 1}`}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </main>
       </section>
@@ -183,7 +233,7 @@ export default function Home() {
         <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-4 md:mb-5">
           <motion.div
             animate={{ x: ['0%', '-50%'] }}
-            transition={{ duration: 65, repeat: Infinity, ease: 'linear' }}
+            transition={{ duration: 200, repeat: Infinity, ease: 'linear' }}
             className="flex gap-6 items-center whitespace-nowrap w-max"
           >
             {[...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems].map((item, idx) => (
@@ -211,7 +261,7 @@ export default function Home() {
         <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <motion.div
             animate={{ x: ['-50%', '0%'] }}
-            transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+            transition={{ duration: 200, repeat: Infinity, ease: 'linear' }}
             className="flex gap-5 items-center whitespace-nowrap w-max"
           >
             {[...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems].map((item, idx) => (

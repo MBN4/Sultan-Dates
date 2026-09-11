@@ -111,7 +111,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#EDF3E8] text-stone-900 antialiased font-sans">
+      <body className="bg-[#FAF8F5] text-stone-900 antialiased font-sans selection:bg-[#4E9200] selection:text-white">
         <CartProvider>
           <ModalProvider>
             <StoreLayoutWrapper>{children}</StoreLayoutWrapper>
