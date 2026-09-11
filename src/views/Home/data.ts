@@ -35,27 +35,27 @@ export const heroSlides = [
 ];
 
 export const marqueeTopItems = [
-  { text: 'عجوة المدينة المنورة', subtitle: 'Sacred Ajwa Al-Madinah', highlight: true },
-  { text: '100% Organic Blessed Harvest', subtitle: 'Grade A+ Jumbo Pick', highlight: false },
-  { text: 'مجدول ملكي فاخر', subtitle: 'King Jumbo Medjool', highlight: true },
-  { text: 'Sunnah Heritage & Purity', subtitle: 'Zero Added Sugars', highlight: false },
-  { text: 'سكري القصيم الذهبي', subtitle: 'Golden Sukkari Rutab', highlight: true },
-  { text: 'Direct Oasis Cold-Chain', subtitle: 'Fresh From Saudi Groves', highlight: false },
-  { text: 'مبروم ملكي ممتاز', subtitle: 'Mabroom Royal Reserve', highlight: true },
-  { text: 'Gold Seal Presentation', subtitle: 'Bespoke Arabian Gifting', highlight: false },
-  { text: 'صفاوي أسود فاخر', subtitle: 'Safawi Midnight Elite', highlight: true },
-  { text: 'Artisanal Stuffed Delicacies', subtitle: 'Belgian Cocoa & Roasted Nuts', highlight: false }
+  { text: 'عجوة المدينة المنورة', subtitle: 'Sacred Ajwa Al-Madinah', highlight: true, image: '/assets/images/products/honey/honey1.png' },
+  { text: '100% Organic Blessed Harvest', subtitle: 'Grade A+ Jumbo Pick', highlight: false, image: '/assets/images/products/honey/honey2.png' },
+  { text: 'مجدول ملكي فاخر', subtitle: 'King Jumbo Medjool', highlight: true, image: '/assets/images/products/ghee/desi-ghee-1kg.png' },
+  { text: 'Sunnah Heritage & Purity', subtitle: 'Zero Added Sugars', highlight: false, image: '/assets/images/products/honey/honey3.png' },
+  { text: 'سكري القصيم الذهبي', subtitle: 'Golden Sukkari Rutab', highlight: true, image: '/assets/images/products/pickles/mango-boneless-pickle.png' },
+  { text: 'Direct Oasis Cold-Chain', subtitle: 'Fresh From Saudi Groves', highlight: false, image: '/assets/images/products/ghee/desi-ghee-both.png' },
+  { text: 'مبروم ملكي ممتاز', subtitle: 'Mabroom Royal Reserve', highlight: true, image: '/assets/images/products/pickles/mix-boneless-achaar.png' },
+  { text: 'Gold Seal Presentation', subtitle: 'Bespoke Arabian Gifting', highlight: false, image: '/assets/images/products/ghee/desi-ghee-half-kg.png' },
+  { text: 'صفاوي أسود فاخر', subtitle: 'Safawi Midnight Elite', highlight: true, image: '/assets/images/products/honey/honey1.png' },
+  { text: 'Artisanal Stuffed Delicacies', subtitle: 'Belgian Cocoa & Roasted Nuts', highlight: false, image: '/assets/images/products/pickles/aalo-bukhara-chutney.png' }
 ];
 
 export const marqueeBottomItems = [
-  { name: 'Ajwa Al-Madinah VIP', price: 'Rs 4,500', arabic: 'عجوة', origin: 'Medina Origin', tag: 'Holy City' },
-  { name: 'Royal King Medjool', price: 'Rs 3,800', arabic: 'مجدول', origin: 'Succulent Jumbo', tag: 'Bestseller' },
-  { name: 'Golden Sukkari Rutab', price: 'Rs 2,900', arabic: 'سكري', origin: 'Al-Qassim', tag: 'Creamy Sweet' },
-  { name: 'Mabroom Royal Reserve', price: 'Rs 3,400', arabic: 'مبروم', origin: 'Ancient Groves', tag: 'Toffee Notes' },
-  { name: 'Belgian Chocolate Dates', price: 'Rs 4,200', arabic: 'شوكولاتة', origin: 'Handcrafted', tag: 'Gourmet' },
-  { name: 'Safawi Midnight Harvest', price: 'Rs 3,200', arabic: 'صفاوي', origin: 'Medina', tag: 'Mineral Rich' },
-  { name: 'Roasted Nut Stuffed Dates', price: 'Rs 3,950', arabic: 'محشي', origin: 'Artisanal', tag: 'Pistachio & Almond' },
-  { name: 'Cold Extracted Date Syrup', price: 'Rs 1,950', arabic: 'دبس تمر', origin: '100% Pure', tag: 'Natural Nectar' }
+  { name: 'Ajwa Al-Madinah VIP', price: 'Rs 4,500', arabic: 'عجوة', origin: 'Medina Origin', tag: 'Holy City', image: '/assets/images/products/honey/honey1.png' },
+  { name: 'Royal King Medjool', price: 'Rs 3,800', arabic: 'مجدول', origin: 'Succulent Jumbo', tag: 'Bestseller', image: '/assets/images/products/ghee/desi-ghee-1kg.png' },
+  { name: 'Golden Sukkari Rutab', price: 'Rs 2,900', arabic: 'سكري', origin: 'Al-Qassim', tag: 'Creamy Sweet', image: '/assets/images/products/pickles/mango-boneless-pickle.png' },
+  { name: 'Mabroom Royal Reserve', price: 'Rs 3,400', arabic: 'مبروم', origin: 'Ancient Groves', tag: 'Toffee Notes', image: '/assets/images/products/pickles/mix-boneless-achaar.png' },
+  { name: 'Belgian Chocolate Dates', price: 'Rs 4,200', arabic: 'شوكولاتة', origin: 'Handcrafted', tag: 'Gourmet', image: '/assets/images/products/pickles/aalo-bukhara-chutney.png' },
+  { name: 'Safawi Midnight Harvest', price: 'Rs 3,200', arabic: 'صفاوي', origin: 'Medina', tag: 'Mineral Rich', image: '/assets/images/products/honey/honey2.png' },
+  { name: 'Roasted Nut Stuffed Dates', price: 'Rs 3,950', arabic: 'محشي', origin: 'Artisanal', tag: 'Pistachio & Almond', image: '/assets/images/products/ghee/white-butter.png' },
+  { name: 'Cold Extracted Date Syrup', price: 'Rs 1,950', arabic: 'دبس تمر', origin: '100% Pure', tag: 'Natural Nectar', image: '/assets/images/products/honey/honey3.png' }
 ];
 
 export const marqueeItems = marqueeTopItems.map(m => m.subtitle);

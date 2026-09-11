@@ -179,17 +179,22 @@ export default function Home() {
         {/* Ambient background glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#4E9200]/10 via-transparent to-transparent pointer-events-none" />
 
-        {/* Top Marquee Ribbon (Moving Left) */}
+        {/* Top Marquee Ribbon (Moving Left - Slower Pace) */}
         <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] mb-4 md:mb-5">
           <motion.div
             animate={{ x: ['0%', '-50%'] }}
-            transition={{ duration: 32, repeat: Infinity, ease: 'linear' }}
-            className="flex gap-8 items-center whitespace-nowrap w-max"
+            transition={{ duration: 65, repeat: Infinity, ease: 'linear' }}
+            className="flex gap-6 items-center whitespace-nowrap w-max"
           >
             {[...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems, ...marqueeTopItems].map((item, idx) => (
-              <div key={idx} className="inline-flex items-center gap-4 group">
+              <div key={idx} className="inline-flex items-center gap-3.5 group">
                 <span className="text-[#C59B27] font-serif text-sm">✦</span>
-                <div className="flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.04] border border-white/10 group-hover:border-[#C59B27]/40 group-hover:bg-white/[0.08] transition-all">
+                <div className="flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 group-hover:border-[#C59B27]/40 group-hover:bg-white/[0.08] transition-all shadow-sm">
+                  {item.image && (
+                    <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 border border-[#C59B27]/30 bg-black/40">
+                      <img src={item.image} alt={item.subtitle} className="w-full h-full object-cover" />
+                    </div>
+                  )}
                   <span className="font-serif text-sm md:text-base font-bold tracking-wide text-stone-100">
                     {item.text}
                   </span>
@@ -202,29 +207,37 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Bottom Marquee Ribbon (Moving in OPPOSITE Direction - Moving Right) */}
+        {/* Bottom Marquee Ribbon (Moving in OPPOSITE Direction - Moving Right - Slower Pace) */}
         <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <motion.div
             animate={{ x: ['-50%', '0%'] }}
-            transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
-            className="flex gap-6 items-center whitespace-nowrap w-max"
+            transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+            className="flex gap-5 items-center whitespace-nowrap w-max"
           >
             {[...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems, ...marqueeBottomItems].map((item, idx) => (
               <div
                 key={idx}
-                className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-gradient-to-r from-white/[0.07] to-white/[0.03] border border-white/10 hover:border-[#4E9200]/50 hover:bg-[#4E9200]/10 transition-all shadow-sm group"
+                className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-gradient-to-r from-white/[0.07] to-white/[0.03] border border-white/10 hover:border-[#4E9200]/50 hover:bg-[#4E9200]/10 transition-all shadow-sm group"
               >
-                <div className="w-2 h-2 rounded-full bg-[#4E9200] shadow-[0_0_8px_#4E9200]" />
-                <span className="font-serif font-bold text-sm text-stone-100 group-hover:text-[#4E9200] transition-colors">
-                  {item.name}
-                </span>
-                <span className="text-xs font-bold text-[#C59B27] font-mono">
-                  {item.price}
-                </span>
-                <span className="text-[10px] uppercase tracking-wider font-semibold text-stone-400 bg-black/40 px-2 py-0.5 rounded-md border border-white/5">
-                  {item.origin}
-                </span>
-                <span className="text-xs font-serif text-[#C59B27] font-bold">
+                {item.image && (
+                  <div className="w-9 h-9 rounded-xl overflow-hidden shrink-0 border border-white/15 bg-black/40">
+                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                <div className="flex flex-col">
+                  <span className="font-serif font-bold text-xs md:text-sm text-stone-100 group-hover:text-[#4E9200] transition-colors leading-tight">
+                    {item.name}
+                  </span>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <span className="text-[11px] font-bold text-[#C59B27] font-mono">
+                      {item.price}
+                    </span>
+                    <span className="text-[9px] uppercase tracking-wider font-semibold text-stone-400 bg-black/40 px-1.5 py-0.5 rounded border border-white/5">
+                      {item.origin}
+                    </span>
+                  </div>
+                </div>
+                <span className="text-xs font-serif text-[#C59B27] font-bold pl-1">
                   {item.arabic}
                 </span>
               </div>
